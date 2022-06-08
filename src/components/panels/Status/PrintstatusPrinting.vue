@@ -277,7 +277,7 @@ export default class StatusPanelPrintstatusPrinting extends Mixins(BaseMixin) {
     formatDateTime(msec: number) {
         const date = new Date(msec)
         const am_pm = date.getHours() > 12 ? ' PM' : ' AM'
-        const h = (date.getHours()%12 || 12) >= 10 ? (date.getHours()%12 || 12) : '0' + (date.getHours()%12 || 12)
+        const h = (date.getHours() % 12 || 12) >= 10 ? date.getHours() % 12 || 12 : '0' + (date.getHours() % 12 || 12)
         const m = date.getMinutes() >= 10 ? date.getMinutes() : '0' + date.getMinutes()
 
         const diff = msec - new Date().getTime()
